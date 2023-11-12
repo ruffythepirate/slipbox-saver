@@ -9,6 +9,9 @@ logs/
 *.js
 *.js.map
 
+# Environment
+.env
+
 # IDE/Editor specific files
 .vscode/
 .idea/
