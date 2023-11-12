@@ -1,0 +1,20 @@
+# Dependency directories
+node_modules/
+
+# Optional: Logs and runtime data
+logs/
+*.log
+
+# Optional: Compiled TypeScript files
+*.js
+*.js.map
+
+# IDE/Editor specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
