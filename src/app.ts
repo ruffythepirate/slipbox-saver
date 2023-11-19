@@ -2,7 +2,10 @@ import express from 'express';
 import multer from 'multer';
 import { BlobServiceClient, StorageSharedKeyCredential } from '@azure/storage-blob';
 
+import { auth } from 'express-openid-connect';
+
 import dotenv from 'dotenv';
+import {configureAuth0} from "./auth0";
 dotenv.config();
 
 
@@ -14,6 +17,7 @@ const accountName: string = process.env.AZURE_STORAGE_ACCOUNT!!;
 const accountKey = process.env.AZURE_STORAGE_KEY!!;
 const containerName = process.env.AZURE_STORAGE_CONTAINER!!;
 
+configureAuth0(app);
 
 // Initialize Azure Blob Storage
 const sharedKeyCredential = new StorageSharedKeyCredential(accountName, accountKey);
